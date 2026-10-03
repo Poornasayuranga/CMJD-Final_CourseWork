@@ -19,7 +19,7 @@ public class UserService {
 
         User user = new User();
 
-        user.setName(userDto.getName());
+        user.setUsername(userDto.getName());
         user.setEmail(userDto.getEmail());
         user.setUserId(userDto.getUserId());
         user.setUserRole(userDto.getRole());
@@ -43,7 +43,7 @@ public class UserService {
     public User updateUser(UserDto userDto, Long id){
         User existingUser = userRepository.getOne(id);
 
-            existingUser.setName(userDto.getName());
+            existingUser.setUsername(userDto.getName());
             existingUser.setEmail(userDto.getEmail());
 
         return userRepository.save(existingUser);
